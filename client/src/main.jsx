@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import Navbar from './pages/navbar.jsx'
+import Form from './pages/form.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
