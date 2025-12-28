@@ -1,6 +1,8 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react'
 import Navbar from './pages/navbar'
 import Form from './pages/form'
+import Home from './pages/home'
 import { ethers } from 'ethers'
 
 function App() {
@@ -20,12 +22,17 @@ function App() {
   }
 
   return (
+    <BrowserRouter>
     <div className="min-h-screen bg-slate-100">
       <Navbar account={account} connectHandler={handleWalletConnect} />
-      <div className="p-10">
-        <Form/>
+      <div className="">
+        <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/admin" element={<Form />} />
+        </Routes>
     </div>
     </div>
+    </BrowserRouter>
   )
 }
 
