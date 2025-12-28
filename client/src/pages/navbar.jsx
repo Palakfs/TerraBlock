@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 
 const Navbar = ({ account, connectHandler }) => {
     return (
@@ -5,7 +6,9 @@ const Navbar = ({ account, connectHandler }) => {
             <div className="text-xl font-bold tracking-wide">TerraBlock</div>
             
             <div className="flex items-center space-x-6">
-                <a href="#" className="hover:text-blue-400 transition">My Lands</a>
+                <Link to="/my-lands" className="hover:text-blue-400 transition font-medium">
+                    My Lands
+                </Link>
                 
                 <div>
                     {account ? (
