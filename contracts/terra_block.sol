@@ -101,7 +101,7 @@ contract TerraBlock is Ownable {
         
         require(_land.forSale == true, "Land not for sale");
         require(msg.value >= _land.price, "Insufficient funds");
-        require(msg.sender != _land.owner, "You already own this land");
+       
 
         address payable oldOwner = _land.owner;
         address payable newOwner = payable(msg.sender);

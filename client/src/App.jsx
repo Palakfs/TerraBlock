@@ -29,7 +29,7 @@ function App() {
        const provider = new ethers.BrowserProvider(window.ethereum);
        const contract = new ethers.Contract(import.meta.env.VITE_CONTRACT_ADDRESS, TerraBlock.abi, provider);
        const data = await contract.getLands();
-       setLands(data); 
+       setLands([...data]);
     }
   }
 
@@ -43,7 +43,7 @@ function App() {
       <Navbar account={account} connectHandler={handleWalletConnect} />
       <div className="">
         <Routes>
-        <Route path="/home" element={<Home lands={lands} />} />
+        <Route path="/home" element={<Home lands={lands} refresh={fetchLands}/>} />
         <Route path="/admin" element={<Form />} />
         <Route path="/my-lands" element={
              <MyLands 
