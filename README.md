@@ -72,7 +72,7 @@ Follow these steps to run the project locally.
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/terrablock.git
+git clone https://github.com/Palakfs/terrablock.git
 cd terrablock
 
 ```
