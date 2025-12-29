@@ -126,7 +126,7 @@ npm run dev
 ```
 ---
 
-**Demo Video**
+## Demo Video
 
 https://github.com/user-attachments/assets/2fcc6389-b7da-4845-ab62-c0a63d38d1cc
 
